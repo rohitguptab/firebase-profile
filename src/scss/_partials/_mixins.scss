@@ -1,0 +1,103 @@
+/* mixins.scss */
+
+/* @include flex(); */
+
+@mixin flex() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin transition($x...) {
+  -webkit-transition: $x;
+  -moz-transition: $x;
+  -ms-transition: $x;
+  -o-transition: $x;
+  transition: $x;
+}
+
+@mixin box-shadow($value) {
+  -webkit-box-shadow: $value;
+  -moz-box-shadow: $value;
+  box-shadow: $value;
+}
+
+@mixin justify-content($val: center) {
+  -webkit-box-pack: 1;
+  -webkit-justify-content: $val;
+  -moz-justify-content: $val;
+  -ms-justify-content: $val;
+  -o-justify-content: $val;
+  justify-content: $val;
+}
+
+@mixin align-items($val: center) {
+  -webkit-box-align: $val; // Old Safari :(
+  -webkit-align-items: $val;
+  -moz-align-items: $val;
+  -ms-align-items: $val;
+  -o-align-items: $val;
+  align-items: $val;
+}
+
+@mixin align-self($val: center) {
+  -webkit-align-self: $val;
+  -moz-align-self: $val;
+  -ms-align-self: $val;
+  -o-align-self: $val;
+  align-self: $val;
+}
+
+@mixin flex-direction($val) {
+  -webkit-box-orient: vertical;
+  -webkit-flex-direction: $val;
+  -moz-flex-direction: $val;
+  -ms-flex-direction: $val;
+  -o-flex-direction: $val;
+  flex-direction: $val;
+}
+
+@mixin flex-wrap($val: nowrap) {
+  -webkit-flex-wrap: $val;
+  -moz-flex-wrap: $val;
+  -ms-flex-wrap: $val;
+  -o-flex-wrap: $val;
+  flex-wrap: $val;
+}
+
+/* Small devices*/
+@mixin sm {
+  @media (max-width: #{$screen-sm-size}) {
+    @content;
+  }
+}
+
+/* Medium devices */
+@mixin md {
+  @media (max-width: #{$screen-md-size}) {
+    @content;
+  }
+}
+
+/* Large devices */
+@mixin lg {
+  @media (max-width: #{$screen-lg-size}) {
+    @content;
+  }
+}
+
+/* Extra large devices */
+@mixin xl {
+  @media (max-width: #{$screen-xl-size}) {
+    @content;
+  }
+}
+
+/* Custom devices */
+@mixin cs($screen) {
+  @media (max-width: $screen+"px") {
+    @content;
+  }
+}

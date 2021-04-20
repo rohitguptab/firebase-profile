@@ -1,0 +1,36 @@
+@import "_partials/reset";
+@import "_partials/variables";
+@import "_partials/mixins";
+@import "_partials/typography";
+
+// Components scss
+
+// Default css
+@import "_components/default";
+
+// loader css
+@import "_components/loader";
+
+// Form and input css
+@import "_components/form";
+
+// Alert and info css
+@import "_components/info";
+
+// User Card css
+@import "_components/card";
+
+// Header css
+@import "_components/header";
+
+// Avatar Image css
+@import "_components/avatar";
+
+// Social icons css
+@import "_components/social";
+
+// Layout css
+@import "_components/layout";
+
+// NotFound css
+@import "_pages/NotFound";

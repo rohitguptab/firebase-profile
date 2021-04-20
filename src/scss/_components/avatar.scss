@@ -1,0 +1,57 @@
+.avatar {
+  text-align: center;
+  margin-bottom: 20px;
+  &__inner {
+    width: 250px;
+    height: 250px;
+    margin: 0 auto;
+    position: relative;
+    img {
+      width: 100%;
+      height: 100%;
+      margin: 0 auto;
+      object-position: center;
+      object-fit: cover;
+    }
+    .fileUploader {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      .fileContainer {
+        margin: 0;
+        padding: 0;
+        background: none;
+        @include box-shadow(none);
+        height: 100%;
+        button {
+          margin: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(51, 51, 51, 0.84) !important;
+          border-radius: 50%;
+          opacity: 0;
+          @include transition(all 0.3s);
+          padding: 0;
+        }
+        p {
+          display: none;
+        }
+      }
+    }
+    &--loading:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-repeat: no-repeat;
+      @include flex();
+      background-position: 50%;
+      background-color: rgba(51, 51, 51, 0.73);
+      background-size: 60px;
+    }
+  }
+}

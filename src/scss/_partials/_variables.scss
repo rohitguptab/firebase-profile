@@ -1,0 +1,29 @@
+$base-color: #333;
+$base-font-size: 16px;
+$base-font-weight: 400;
+$base-font: "Noto Sans JP", sans-serif;
+$heading-font: "Fjalla One", sans-serif;
+
+$blue: #242841;
+$white: #fff;
+$black: #333;
+$red: #f04c55;
+$red-dark: #c54850;
+$green: #39dc39;
+
+/* font style */
+$italic: italic;
+$normal: normal;
+
+/* media css */
+/* Small tablets and large smartphones (landscape view) */
+$screen-sm-size: 567px;
+
+/*// Small tablets (portrait view)*/
+$screen-md-size: 767px;
+
+/*// Tablets and small desktops*/
+$screen-lg-size: 900px;
+
+/*// Large tablets and desktops*/
+$screen-xl-size: 1200px;

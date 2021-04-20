@@ -1,0 +1,30 @@
+.info-box {
+  width: 100%;
+  padding: 15px 20px;
+  margin-bottom: 30px;
+  border: 1px solid $green;
+  color: $green;
+  text-align: center;
+}
+
+.alert {
+  color: #f04c55;
+  font-size: 12px;
+  border: 1px solid #f04c55;
+  padding: 5px 10px;
+  &--success {
+    color: #39dc39;
+    border-color: #39dc39;
+  }
+  &--label {
+    border: none;
+    padding: 10px 0 0 0;
+    display: block;
+  }
+}
+
+.alert--label ~ div input[type="submit"] {
+  opacity: 0.8;
+  cursor: not-allowed;
+  pointer-events: none;
+}

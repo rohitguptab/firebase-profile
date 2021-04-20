@@ -1,0 +1,73 @@
+.site-header {
+  background: $red-dark;
+  &__inner {
+    @include flex();
+    @include align-items(center);
+    justify-content: space-between;
+    .navbar__nav {
+      list-style: none;
+      margin: 0;
+      @include flex();
+      @include align-items(center);
+      padding: 0;
+      .navbar__nav__item {
+        position: relative;
+        a {
+          padding: 15px 30px;
+          display: inline-block;
+          -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+          font-size: $base-font-size;
+          width: 100%;
+          &.profile-img {
+            padding: 0;
+            @include flex();
+          }
+          &:hover {
+            background: $red;
+            color: $white;
+          }
+          @include sm {
+            padding: 15px 15px;
+          }
+        }
+        &--active {
+          a {
+            background: $red;
+            color: $white;
+          }
+        }
+        &.navbar__nav__item--profile {
+          @include flex();
+          @include align-items(center);
+          .avatar {
+            margin: 0;
+            .avatar__inner {
+              width: 54px;
+              height: 54px;
+              cursor: pointer;
+            }
+          }
+        }
+        .sub-menu {
+          position: absolute;
+          top: 100%;
+          right: 0;
+          background: $white;
+          width: 210px;
+          color: $base-color;
+          z-index: 9;
+          @include box-shadow(2px 2px 7px 0px #0000003b);
+          display: none;
+        }
+        &:hover .sub-menu {
+          display: block;
+        }
+      }
+    }
+  }
+  &__logo {
+    font-family: "Fjalla One", sans-serif;
+    letter-spacing: 0.5px;
+  }
+}
