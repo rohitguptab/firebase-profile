@@ -16,13 +16,9 @@ class Profile extends Component {
       return (
         <React.Fragment>
           <div className="card">
-            {profile.map(item => {
-              if(item.public && item.emailVerified){
-                return <Card key={item.id} item={item} />  
-              } else{
-                return null;
-              }
-            })}
+            {profile.map(item => 
+              <Card key={item.id} item={item} />  
+            )}
           </div>
         </React.Fragment>
       );
@@ -40,7 +36,10 @@ Profile.propTypes = {
 export default compose(
   firestoreConnect([{ 
     collection: 'profile',
-    orderBy: ['displayName', 'asc']
+    where: [
+      ['emailVerified', '==', true],
+      ['public', '==', true]
+    ]
   }]),
   connect((state, props) => ({
     profile: state.firestore.ordered.profile,
